@@ -1,4 +1,8 @@
-package com.algo.part1.unionfind;
+package com.algo.part1;
+
+import com.algo.part1.unionfind.QuickFindUF;
+import com.algo.part1.unionfind.QuickUnionUF;
+import com.algo.part1.unionfind.UF;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -13,7 +17,9 @@ public class UnionFind {
     System.out.println("Enter total size.");
     Scanner scanner = new Scanner(System.in);
     int N = scanner.nextInt();
-    QuickFindUF uf = new QuickFindUF(N);
+    UF uf = null;
+//    uf = new QuickFindUF(N);
+    uf = new QuickUnionUF(N);
     boolean _do = true;
     do
     {

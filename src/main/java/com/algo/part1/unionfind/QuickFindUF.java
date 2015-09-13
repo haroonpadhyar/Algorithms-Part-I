@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by hpadhyar on 9/13/2015.
  */
-public class QuickFindUF {
+public class QuickFindUF implements UF{
   int[] id = null;
   public QuickFindUF(int N){
     id = new int[N];
