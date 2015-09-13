@@ -2,47 +2,18 @@ package com.algo.part1.unionfind;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 /**
  * Created by haroonpadhyar on 9/6/15.
  */
 public class UnionFind {
 
-  int[] id = null;
-  public UnionFind(int N){
-    id = new int[N];
-    for (int i = 0; i < id.length; i++) {
-      id[i] = i;
-    }
-    System.out.println(Arrays.toString(id));
-  }
-
-  public void union(int p, int q){
-    id[q] = id[p];
-  }
-
-  public boolean connected(int p, int q){
-    return  id[q] == id[p];
-  }
-
-  public int find(int p){
-    return 1;
-  }
-  public int count(){
-    return 1;
-  }
-
-  public int[] getId(){
-    return id;
-  }
-
   public static void main(String[] args)
   {
     System.out.println("Enter total size.");
     Scanner scanner = new Scanner(System.in);
     int N = scanner.nextInt();
-    UnionFind uf = new UnionFind(N);
+    QuickFindUF uf = new QuickFindUF(N);
     boolean _do = true;
     do
     {
