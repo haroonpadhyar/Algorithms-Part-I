@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by hpadhyar on 9/13/2015.
  */
 public class QuickFindUF implements UF{
-  int[] id = null;
+  int[] id;
   public QuickFindUF(int N){
     id = new int[N];
     for (int i = 0; i < id.length; i++) { // N Array access
@@ -33,7 +33,7 @@ public class QuickFindUF implements UF{
     return 1;
   }
 
-  public int[] getId(){
-    return id;
+  public void print(){
+    System.out.println(Arrays.toString(id));
   }
 }

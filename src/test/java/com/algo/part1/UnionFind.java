@@ -1,6 +1,6 @@
 package com.algo.part1;
 
-import com.algo.part1.unionfind.QuickFindUF;
+import com.algo.part1.unionfind.ImprovedUnionFindUF;
 import com.algo.part1.unionfind.QuickUnionUF;
 import com.algo.part1.unionfind.UF;
 
@@ -19,7 +19,8 @@ public class UnionFind {
     int N = scanner.nextInt();
     UF uf = null;
 //    uf = new QuickFindUF(N);
-    uf = new QuickUnionUF(N);
+//    uf = new QuickUnionUF(N);
+    uf = new ImprovedUnionFindUF(N);
     boolean _do = true;
     do
     {
@@ -40,7 +41,7 @@ public class UnionFind {
           }else {
             System.out.println(p + " already connect " + q);
           }
-          System.out.println(Arrays.toString(uf.getId()));
+          uf.print();
         }
       }catch (Exception e){
         System.out.println("Wrong input'"+conn+"'. going to be crashed");
