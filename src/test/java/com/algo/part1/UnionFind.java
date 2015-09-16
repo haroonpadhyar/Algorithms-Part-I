@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Created by haroonpadhyar on 9/6/15.
  */
 public class UnionFind {
-
+// Temp: Sort slide 9, 13
   public static void main(String[] args)
   {
     System.out.println("Enter total size.");
