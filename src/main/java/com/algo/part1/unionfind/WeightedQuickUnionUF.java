@@ -5,11 +5,11 @@ import java.util.Arrays;
 /**
  * Created by hpadhyar on 9/14/2015.
  */
-public class ImprovedUnionFindUF  implements UF{
+public class WeightedQuickUnionUF implements UF{
 
   int[] id;
   int[] sz;
-  public ImprovedUnionFindUF(int N){
+  public WeightedQuickUnionUF(int N){
     id = new int[N];
     sz = new int[N];
     for (int i = 0; i < id.length; i++) { // N Array access

@@ -1,17 +1,15 @@
 package com.algo.part1;
 
-import com.algo.part1.unionfind.ImprovedUnionFindUF;
-import com.algo.part1.unionfind.QuickUnionUF;
+import com.algo.part1.unionfind.WeightedQuickUnionUF;
 import com.algo.part1.unionfind.UF;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * Created by haroonpadhyar on 9/6/15.
  */
 public class UnionFind {
-// Temp: Sort slide 9, 13
+
   public static void main(String[] args)
   {
     System.out.println("Enter total size.");
@@ -20,7 +18,7 @@ public class UnionFind {
     UF uf = null;
 //    uf = new QuickFindUF(N);
 //    uf = new QuickUnionUF(N);
-    uf = new ImprovedUnionFindUF(N);
+    uf = new WeightedQuickUnionUF(N);
     boolean _do = true;
     do
     {
