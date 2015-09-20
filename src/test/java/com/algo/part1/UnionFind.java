@@ -1,5 +1,6 @@
 package com.algo.part1;
 
+import com.algo.part1.unionfind.WeightedQuickUnionPathCompressionUF;
 import com.algo.part1.unionfind.WeightedQuickUnionUF;
 import com.algo.part1.unionfind.UF;
 
@@ -18,7 +19,8 @@ public class UnionFind {
     UF uf = null;
 //    uf = new QuickFindUF(N);
 //    uf = new QuickUnionUF(N);
-    uf = new WeightedQuickUnionUF(N);
+//    uf = new WeightedQuickUnionUF(N);
+    uf = new WeightedQuickUnionPathCompressionUF(N);
     boolean _do = true;
     do
     {
