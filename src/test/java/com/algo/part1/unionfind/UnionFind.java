@@ -1,4 +1,4 @@
-package com.algo.part1;
+package com.algo.part1.unionfind;
 
 import com.algo.part1.unionfind.WeightedQuickUnionPathCompressionUF;
 import com.algo.part1.unionfind.WeightedQuickUnionUF;
