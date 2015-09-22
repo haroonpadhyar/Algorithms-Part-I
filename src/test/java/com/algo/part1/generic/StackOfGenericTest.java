@@ -1,11 +1,28 @@
 package com.algo.part1.generic;
 
+import java.util.Iterator;
 import java.util.Scanner;
+
+import org.junit.Test;
 
 /**
  * Created by haroonpadhyar on 9/20/15.
  */
 public class StackOfGenericTest {
+
+  @Test
+  public void testIteratorArrayStack(){
+    StackInterface<String> stackGeneric = null;
+//    stackGeneric = new ArrayStackGeneric<String>(10);
+    stackGeneric = new LinkedStackGeneric<String>();
+    stackGeneric.push("A");
+    stackGeneric.push("B");
+    stackGeneric.push("C");
+    stackGeneric.push("D");
+    for (String s : stackGeneric) {
+      System.out.println(s);
+    }
+  }
 
   public static void main(String[] args) {
 

@@ -3,7 +3,7 @@ package com.algo.part1.generic;
 /**
  * Created by haroonpadhyar on 9/20/15.
  */
-public interface StackInterface<T> {
+public interface StackInterface<T> extends  Iterable<T>{
   void push(T val);
   T pop();
   boolean isEmpty();

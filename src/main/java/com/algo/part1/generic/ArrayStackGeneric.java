@@ -1,6 +1,7 @@
 package com.algo.part1.generic;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
@@ -44,4 +45,26 @@ public class ArrayStackGeneric<T> implements StackInterface<T>{
     System.out.println(size());
   }
 
+  @Override
+  public Iterator<T> iterator() {
+    return new StackIterator();
+  }
+
+  private class StackIterator implements Iterator<T>{
+    private int i = N;
+    @Override
+    public boolean hasNext() {
+      return i > 0;
+    }
+
+    @Override
+    public T next() {
+      return s[--i];
+    }
+
+    @Override
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+  }
 }

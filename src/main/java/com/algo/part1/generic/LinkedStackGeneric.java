@@ -1,5 +1,6 @@
 package com.algo.part1.generic;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
@@ -48,4 +49,28 @@ public class LinkedStackGeneric<T> implements StackInterface<T>{
 
   }
 
+  @Override
+  public Iterator<T> iterator() {
+    return new StackIterator();
+  }
+
+  private class StackIterator implements Iterator<T>{
+    private Node f = first;
+    @Override
+    public boolean hasNext() {
+      return f != null;
+    }
+
+    @Override
+    public T next() {
+      T val = f.val;
+      f = f.next;
+      return val;
+    }
+
+    @Override
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+  }
 }
